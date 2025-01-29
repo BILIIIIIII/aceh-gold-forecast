@@ -1,0 +1,18 @@
+# API
+fastapi
+uvicorn
+requests
+beautifulsoup4
+tqdm
+pydantic
+chardet
+
+# ML MODEL
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+xgboost
+lightgbm
+# catboost
