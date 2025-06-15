@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILE="data/harga_emas_2013_2025_volatility.csv"
+FILE="data/FX_IDC_XAUIDRG_1D.csv"
 
 # Cek apakah file CSV sudah ada
 if [ ! -f "$FILE" ]; then
