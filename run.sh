@@ -11,4 +11,4 @@ else
 fi
 
 # Jalankan API
-uvicorn api.main:app --reload
+uvicorn api.main:api --reload

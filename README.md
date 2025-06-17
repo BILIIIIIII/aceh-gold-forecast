@@ -1,14 +1,14 @@
-### Instructions
+# Instructions
 
 1. **Install Dependencies**
 
-   ```
-   pip install -r reqs.txt
+   ```py
+   pip install -r requirements.txt
    ```
 
 2. **Run the Project**
 
-   ```
+   ```py
    ./run.sh
    ```
 
@@ -20,10 +20,8 @@
 
    - Specific date: `http://127.0.0.1:8000/gold_prices/2013-09-01`
 
-### Notes
+## Notes
 
 - Ensure that the scraper has permission to access and scrape the target website.
-
 - Adjust the scraper if the website structure changes.
-
 - For production, consider using a database for better performance and scalability.

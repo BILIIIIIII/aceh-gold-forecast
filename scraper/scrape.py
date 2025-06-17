@@ -5,7 +5,7 @@ import csv
 import time
 from tqdm import tqdm
 
-# Mapping bulan (angka) -> string nama bulan (bahasa Indonesia).
+# Mapiing bulan (angka) -> string nama bulan (bahasa Indonesia).
 # Sesuaikan jika situs pakai bahasa Inggris, mis. "January", "February", dll.
 MONTH_NAMES = {
     1:  "Januari",
@@ -111,7 +111,7 @@ def scrape_year(year: int, overall_start: date, overall_end: date, debug: bool =
 
             usd, idr = scrape_gold_price(y, m, d, debug=debug)
 
-            data_year.append({
+            data_year.apiend({
                 "Date": current_date.isoformat(),  # YYYY-MM-DD
                 "USD":  usd,
                 "IDR":  idr
@@ -147,7 +147,7 @@ def main():
         print(f"-> [INFO] Tahun {year} selesai. Data ditambahkan: {len(data_for_year)}")
 
     # Setelah seluruh tahun digabung, simpan ke CSV
-    csv_filename = "harga_emas_2013_2025_volatility.csv"
+    csv_filename = "FX_IDC_XAUIDRG_1D.csv"
     with open(csv_filename, "w", newline="", encoding="utf-8") as f:
         fieldnames = ["Date", "USD", "IDR"]
         writer = csv.DictWriter(f, fieldnames=fieldnames)
