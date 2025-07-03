@@ -1,8 +1,18 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/wwwmayam/mayam-api
-    - /bin/cp -R * $DEPLOYPATH
-    - /bin/cp .cpanel.yml $DEPLOYPATH
+    # Set DEPLOYPATH to the directory where this .cpanel.yml file lives.
+    # This is effectively your /home/wwwmayam/repositories/aceh-gold-forecast directory.
+    - export DEPLOYPATH=/home/wwwmayam/repositories/aceh-gold-forecast
+
+    # You don't need 'cp -R' commands here anymore
+    # because the files are already in $DEPLOYPATH after your git push!
+
+    # Activate the virtual environment and install/update requirements.
+    # Make sure your 'virtualenv' folder is also inside aceh-gold-forecast,
+    # or adjust this path if it's somewhere else.
     - source $DEPLOYPATH/virtualenv/bin/activate && pip install -r $DEPLOYPATH/requirements.txt
+
+    # This touches a file to signal your application server (like Passenger) to restart.
+    # This assumes your 'tmp' directory is within your deployment path.
     - /usr/bin/touch $DEPLOYPATH/tmp/restart.txt
