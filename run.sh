@@ -1,5 +1,4 @@
 #!/bin/bash
-
 FILE="data/FX_IDC_XAUIDRG_1D.csv"
 
 # Cek apakah file CSV sudah ada
