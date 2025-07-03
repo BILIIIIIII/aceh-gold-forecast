@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/wwwmayam/aceh_gold_app/
+    - export DEPLOYPATH=/home/wwwmayam/mayam-api
     - /bin/cp -R * $DEPLOYPATH
     - /bin/cp .cpanel.yml $DEPLOYPATH
     - source $DEPLOYPATH/virtualenv/bin/activate && pip install -r $DEPLOYPATH/requirements.txt
