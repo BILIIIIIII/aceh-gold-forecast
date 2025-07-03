@@ -19,7 +19,7 @@ def root():
         "message": "Gunakan /gold_prices/ (data historis) atau /forecast/ (data prediksi)"
     })
 
-@router.get("/gold_prices/")
+@router.get("/gold_prices")
 def read_gold_prices(
     time: Optional[str] = Query(default=None),
     sort: Optional[str] = Query(default=None, regex="^(asc|desc)$"),
