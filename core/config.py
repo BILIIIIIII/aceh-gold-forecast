@@ -5,7 +5,7 @@ class Settings:
         "http://localhost",
         "http://localhost:8080",
         "http://localhost:3000",
-        "https://aceh-gold-forecast.vercel.app"
+        "https://mayam-aceh.vercel.app"
     ]
 
 settings = Settings()
